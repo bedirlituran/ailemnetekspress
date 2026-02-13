@@ -1,0 +1,167 @@
+/* Ümumi fon */
+.xidmetler-section {
+  background: linear-gradient(to bottom, #211f36 60%, #102b4a 100%);
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Neon çərçivə (simmetrik) */
+.main-rectangle {
+  position: relative;
+  width: 90%;
+  max-width: 1440px;
+  padding: 80px 60px;
+  margin: 0 auto;
+  border-radius: 25px;
+  background: #211f36;
+  border: 2px solid transparent;
+  background-clip: padding-box, border-box;
+  background-image: linear-gradient(#211f36, #211f36),
+    linear-gradient(135deg, #fb37ff, #18b2de);
+  background-origin: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Başlıq tam ortada */
+.section-title {
+  font-size: 42px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative; /* xəttin yerləşməsi üçün əlavə */
+}
+
+/* Kartlar mərkəzdə və bərabər aralıqla */
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  height: 260px;
+}
+
+/* Kartlar (alt xəttsiz neon stroke) */
+.service-card {
+  width: 230px;
+  height: 200px;
+  border-radius: 16px;
+  background: #211f36;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: none;
+  background-image: linear-gradient(#211f36, #211f36),
+    linear-gradient(135deg, #fb37ff, #18b2de);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, #fb37ff, #18b2de);
+  border-radius: 10px;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.join-btn {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid #ffffff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.join-btn:hover {
+  border: 1.5px solid transparent;
+  background-image: linear-gradient(#211f36, #211f36),
+    linear-gradient(135deg, #fb37ff, #18b2de);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 0 15px rgba(24, 178, 222, 0.7),
+              0 0 25px rgba(251, 55, 255, 0.5);
+  transform: scale(1.05);
+}
+
+.join-btn:active {
+  border: 1.5px solid transparent;
+  background-image: linear-gradient(#211f36, #211f36),
+    linear-gradient(135deg, #fb37ff, #18b2de);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 0 15px rgba(24, 178, 222, 0.7),
+              0 0 25px rgba(251, 55, 255, 0.5);
+  transform: scale(1.05);
+}
+
+
+/* Slider düymələri */
+.nav-ellipse {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #211f36;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+.nav-ellipse.right {
+  right: -25px;
+}
+
+.nav-ellipse.left {
+  left: -25px;
+}
+
+.nav-ellipse:hover {
+  border: 1px solid transparent;
+  background-image: linear-gradient(#211f36, #211f36),
+    linear-gradient(135deg, #fb37ff, #18b2de);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 0 15px rgba(24, 178, 222, 0.7),
+              0 0 25px rgba(251, 55, 255, 0.5);
+  transform: translateY(-50%) scale(1.08);
+}

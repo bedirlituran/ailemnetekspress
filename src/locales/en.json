@@ -1,0 +1,69 @@
+{
+  "navbar": {
+    "about": "About Us",
+    "tariffs": "Tariffs",
+    "campaigns": "Campaigns",
+    "services": "Services",
+    "areas": "Areas",
+    "payment": "Payments",
+    "apply": "Apply",
+    "info": "Information"
+  },
+
+  "about": {
+    "title": "About Us",
+    "text1": "As Ailəmnet, our goal is to provide you with fast, reliable, and high-quality internet service. Our top priority is ensuring that our customers can continue their daily work, education, and entertainment without interruptions or problems. Our team consists of highly experienced specialists who constantly strive to ensure customer satisfaction by applying the latest technological innovations. Thanks to the high-speed internet connection we provide through fiber-optic technology, you can enjoy a stable and seamless connection both at home and at work.",
+    "text2": "Ailəmnet — means speed, quality, and reliability."
+  },
+
+  "tariffs": {
+    "titleTariffs": "Tariffs",
+    "titleCampaigns": "Campaigns",
+    "tabInternet": "Internet",
+    "tabInternetTV": "Internet + TV",
+    "tabCampaigns": "Campaigns",
+    "join": "Join",
+    "promoTitle": "Permanent Campaign!",
+    "pay": "Pay",
+    "free": "Free",
+    "months": "months",
+    "month": "month",
+    "joinNow": "Join Now"
+  },
+  "services": {
+  "title": "Services",
+  "internet": "Internet & Communication",
+  "wireless": "Wireless Connection",
+  "iptv": "IP TV",
+  "ipphone": "IP Telephony",
+  "join": "Join Now"
+},
+
+"areas": {
+  "title": "Areas",
+  "sabunchu": "Sabunchu",
+  "bakikhanov": "Bakikhanov"
+},
+
+"payment": {
+  "title": "Payment",
+  "subtitle": "You can easily make your monthly payments both online and through payment terminals."
+},
+
+"contact": {
+  "title": "Contact us:",
+  "name": "Full Name",
+  "email": "Email",
+  "phone": "Phone Number",
+  "message": "Message",
+  "send": "Send Request",
+  "sentMessage": "Request sent!"
+},
+
+"footer": {
+  "contactTitle": "Contact Information:",
+  "address": "Baku city, Narimanov district, Kral Huseyn Street 64B"
+}
+
+
+}

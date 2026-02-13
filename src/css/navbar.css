@@ -1,0 +1,141 @@
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(23, 21, 42, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  height: 90px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.navbar-logo {
+  margin-left: 50px;
+}
+
+.navbar-logo img {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.05);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-right: 60px; 
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar-links a {
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar-links a:hover {
+  color: #18b2de;
+}
+
+.navbar-links a.active {
+  color: #18b2de;
+  font-weight: 500;
+}
+
+.flag-wrapper {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-flag {
+  width: 30px;
+  border-radius: 6px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.main-flag:hover {
+  transform: scale(1.1);
+}
+
+.flag-dropdown {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, -15px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.flag-dropdown.show {
+  animation: flagSlideDownOneFlow 0.5s ease-out forwards;
+  pointer-events: auto;
+}
+
+@keyframes flagSlideDownOneFlow {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 10px);
+  }
+}
+
+.flag-dropdown img {
+  width: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.flag-dropdown img:hover {
+  transform: scale(1.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- mobil versiya --- */
+@media (max-width: 992px) {
+  .navbar-container {
+    padding: 10px 20px;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+}

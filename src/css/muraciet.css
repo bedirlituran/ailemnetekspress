@@ -1,0 +1,123 @@
+.muraciet-section {
+  background: #211f36;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Neon çərçivə */
+.muraciet-box {
+  width: 700px; /* eni */
+  border-radius: 25px;
+  padding: 60px 80px; /* iç boşluq balansı */
+  background: #211f36;
+  border: 2px solid transparent;
+  background-clip: padding-box, border-box;
+  background-image: linear-gradient(#211f36, #211f36),
+    linear-gradient(135deg, #fb37ff, #18b2de);
+  background-origin: border-box;
+  box-shadow: 0 0 25px rgba(24, 178, 222, 0.15);
+  text-align: center;
+}
+
+/* Başlıq */
+.muraciet-title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* Form sahələri */
+.muraciet-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.muraciet-form input,
+.muraciet-form textarea {
+  width: 100%; /* qutunun eninə uyğun olacaq */
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #fff;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Göndər düyməsi */
+.submit-btn {
+  display: block;          /* mərkəzdə işləməsi üçün */
+  width: 200px;            
+  margin: 20px auto 0;      /* yuxarıdan 5px, ortada mərkəz */
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  border-radius: 20px;
+  padding: 8px 25px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  border: 1.5px solid transparent;
+  background-image: linear-gradient(#211f36, #211f36),
+    linear-gradient(135deg, #fb37ff, #18b2de);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 0 15px rgba(24, 178, 222, 0.7),
+              0 0 25px rgba(251, 55, 255, 0.5);
+  transform: scale(1.05);
+}
+
+/* Sorğu göndərildikdə sabit parıltı */
+.submit-btn.sent {
+  border: 1.5px solid transparent;
+  background-image: linear-gradient(#211f36, #211f36),
+    linear-gradient(135deg, #fb37ff, #18b2de);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 0 15px rgba(24, 178, 222, 0.7),
+              0 0 25px rgba(251, 55, 255, 0.5);
+  transform: scale(1.05);
+  color: #fff;
+}
+
+.wp-icon {
+  position: fixed;
+  bottom: 35px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.wp-icon:hover {
+  transform: translateY(-6px);
+}
+
+.wp-icon:active {
+  transform: translateY(0);
+}
+
+/* Placeholder üçün opacity effekti */
+.muraciet-form input::placeholder,
+.muraciet-form textarea::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+  transition: opacity 0.3s ease;
+}
+
+/* Fokus olanda placeholder solur */
+.muraciet-form input:focus::placeholder,
+.muraciet-form textarea:focus::placeholder {
+  opacity: 0.3;
+}

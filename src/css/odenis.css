@@ -1,0 +1,74 @@
+/* Ümumi bölmə */
+.odenis-section {
+  background: #211f36;
+  padding: 100px 0;
+  text-align: center;
+}
+
+/* Başlıq */
+.odenis-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Alt mətn */
+.odenis-subtitle {
+  font-size: 17px;
+  color: #e4e3e3;
+  margin-top: 0px;
+  margin-bottom: 70px;
+  line-height: 1.6;
+}
+
+/* Kart konteyneri */
+.odenis-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* Kartın ümumi görünüşü */
+.odenis-card {
+  width: 300px;
+  height: 130px;
+  border-radius: 20px;
+  border: 1px solid rgb(255, 255, 255);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* logo ortada */
+  padding: 0 35px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+}
+
+/* Loqo tam ortada və eyni ölçüdə */
+.odenis-card img {
+  width: 110px;
+  height: 65px;
+  object-fit: contain;
+}
+
+.arrow {
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  right: 35px;
+  top: 50%;
+  transform: translateY(-10%);
+}
+
+/* Hover zamanı neon parıltı */
+.odenis-card:hover {
+  border: 1.5px solid transparent;
+  background-image: linear-gradient(#211f36, #211f36),
+    linear-gradient(135deg, #fb37ff, #18b2de);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 0 18px rgba(24, 178, 222, 0.25);
+}

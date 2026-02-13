@@ -1,0 +1,69 @@
+{
+  "navbar": {
+    "about": "Haqqımızda",
+    "tariffs": "Tariflər",
+    "campaigns": "Kampaniyalar",
+    "services": "Xidmətlərimiz",
+    "areas": "Ərazilərimiz",
+    "payment": "Ödənişlər",
+    "apply": "Müraciət",
+    "info": "Məlumat"
+  },
+
+  "about": {
+    "title": "Haqqımızda",
+    "text1": "Ailəmnet Ekspress olaraq məqsədimiz sizə sürətli, etibarlı və keyfiyyətli internet xidməti təqdim etməkdir. Müştərilərimizin gündəlik işlərini, təhsilini və əyləncəsini fasiləsiz və problemsiz şəkildə davam etdirə bilməsi bizim üçün ən önəmli prioritetdir. Bizim komandamız yüksək təcrübəli mütəxəssislərdən ibarətdir və texnologiyanın son yeniliklərini tətbiq edərək hər zaman müştəri məmnuniyyətini təmin etməyə çalışır. Fiber-optik texnologiya ilə təmin etdiyimiz sürətli internet bağlantısı sayəsində həm evlərdə, həm də iş yerlərində problemsiz və stabil bağlantı əldə edə bilərsiniz.",
+    "text2": "Ailəmnet — sürət, keyfiyyət və etibarlılıq deməkdir."
+  },
+
+  "tariffs": {
+    "titleTariffs": "Tariflər",
+    "titleCampaigns": "Kampaniyalar",
+    "tabInternet": "İnternet",
+    "tabInternetTV": "İnternet + TV",
+    "tabCampaigns": "Kampaniyalar",
+    "join": "Qoşul",
+    "promoTitle": "Daimi kampaniya!",
+    "pay": "Ödə",
+    "free": "Pulsuz",
+    "months": "ay",
+    "month": "ay",
+    "joinNow": "İndi qoşul"
+  },
+  
+  "services": {
+  "title": "Xidmətlərimiz",
+  "internet": "İnternet və Rabitə",
+  "wireless": "Simsiz Rabitə",
+  "iptv": "İP TV",
+  "ipphone": "İP Telefoniya",
+  "join": "Qoşulmaq üçün"
+},
+
+"areas": {
+  "title": "Ərazilərimiz",
+  "sabunchu": "Sabunçu",
+  "bakikhanov": "Bakıxanov"
+},
+
+"payment": {
+  "title": "Ödəniş",
+  "subtitle": "Aylıq ödənişlərinizi həm onlayn, həm də ödəniş terminalları vasitəsilə rahatlıqla həyata keçirə bilərsiniz"
+},
+
+"contact": {
+  "title": "Müraciət üçün:",
+  "name": "Ad Soyad",
+  "email": "E-mail",
+  "phone": "Əlaqə nömrəsi",
+  "message": "Mətn",
+  "send": "Sorğu göndər",
+  "sentMessage": "Sorğu göndərildi!"
+},
+
+"footer": {
+  "contactTitle": "Əlaqə məlumatları:",
+  "address": "Ünvan: Bakı şəhəri, Nərimanov rayonu Kral hüseyn küçəsi 64B"
+}
+
+}
