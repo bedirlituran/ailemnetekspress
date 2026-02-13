@@ -9,7 +9,7 @@ function Melumat() {
     <footer className="melumat-section" id="melumat">
       <div className="melumat-container">
         <div className="melumat-right">
-          <img src="/logo.png" alt="Ailəmnet Ekspress" className="melumat-logo" />
+          LEOTELECOM
 
           <div className="melumat-icons">
             <a
@@ -21,7 +21,7 @@ function Melumat() {
             </a>
 
             <a
-              href="https://wa.me/994103109988"
+              href="https://wa.me/994774466017"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -43,17 +43,17 @@ function Melumat() {
           <p className="melumat-address">{t("footer.address")}</p>
 
           <div className="melumat-numbers">
-            <a href="tel:+994123109988">+994123109988</a>
-            <a href="tel:+994103109988">+994103109988</a>
+            <a href="tel:+994774466017">+994774466017</a>
+            <a href="tel:+994774466017">+994774466017</a>
           </div>
 
           <p className="melumat-email">
-            E-mail: <a href="mailto:support@ailemnet.az">support@ailemnet.az</a>
+            E-mail: <a href="mailto:tsn121236@gmail.com">tsn121236@gmail.com</a>
           </p>
         </div>
       </div>
 
-      <div className="melumat-footer">© 2025 Ailəmnet Ekspress MMC</div>
+      <div className="melumat-footer">© 2025 Leo Telecom MMC</div>
     </footer>
   );
 }

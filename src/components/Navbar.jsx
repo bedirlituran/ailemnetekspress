@@ -80,7 +80,7 @@ function Navbar() {
         {/* LOGO */}
         <div className="navbar-logo">
           <a href="#home" onClick={(e) => handleLinkClick(e, "#home")}>
-            <img src={logo} alt="Ailemnet Ekspress" />
+            LEOTELECOM
           </a>
         </div>
 

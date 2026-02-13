@@ -10,13 +10,13 @@ function Odenis() {
       id: 1,
       name: "fpay",
       img: "/fpaylogo.png",
-      link: "https://fpay.az/guest/payments/new-payment/category/4950/merchant/6305",
+      link: "https://fpay.az/guest/payments/new-payment/category/4950/merchant/6120",
     },
     {
       id: 2,
       name: "expresspay",
       img: "/expresspaylogo.png",
-      link: "https://expresspay.az/payment/service/1816",
+      link: "https://expresspay.az/payment/service/1535",
     },
   ];
 

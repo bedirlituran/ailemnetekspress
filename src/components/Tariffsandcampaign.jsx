@@ -77,7 +77,7 @@ const Tariffsandcampaign = () => {
           <div className="tariffsac-cards">
          
             <div className="tariffsac-card">
-              <h3>30 AZN</h3>
+              <h3>32 AZN</h3>
               <p>100 Mbit/s + TV</p>
               <button onClick={scrollToContact}>{t("tariffs.join")}</button>
             </div>

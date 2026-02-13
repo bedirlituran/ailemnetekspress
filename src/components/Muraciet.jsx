@@ -27,7 +27,7 @@ function Muraciet() {
       </div>
 
       <a
-        href="https://wa.me/994103109988"
+        href="https://wa.me/994774466017"
         target="_blank"
         rel="noopener noreferrer"
       >
