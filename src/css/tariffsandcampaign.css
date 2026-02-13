@@ -1,14 +1,14 @@
 .tariffsac-section {
   position: relative;
   background: #211f36;
-  padding: 100px 0;
+  padding: 100px 20px;
   text-align: center;
   color: #fff;
   overflow: hidden;
   z-index: 0;
 }
 
-/* Aşağıdan parlayan effekt */
+/* Aşağıdan parlayan effekt (istəyə bağlı aktivləşdirilə bilər) */
 .tariffsac-section::after {
   content: "";
   position: absolute;
@@ -17,13 +17,6 @@
   bottom: -35%;
   width: 150%;
   height: 50%;
-  /* background: radial-gradient(
-    ellipse at bottom,
-    rgba(24, 178, 222, 0.75) 0%,
-    rgba(24, 178, 222, 0.35) 40%,
-    rgba(24, 178, 222, 0.08) 70%,
-    rgba(24, 178, 222, 0) 85%
-  ); */
   filter: blur(60px);
   pointer-events: none;
   z-index: 0;
@@ -45,6 +38,7 @@
 .tariffsac-tabs {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 15px;
   margin-bottom: 60px;
 }
@@ -69,7 +63,7 @@
   cursor: pointer;
   transition: all 0.35s ease;
   box-shadow: 0 0 12px rgba(24, 178, 222, 0.1),
-    0 0 12px rgba(174, 16, 242, 0.1);
+              0 0 12px rgba(174, 16, 242, 0.1);
 }
 
 .tariffsac-tab:hover {
@@ -82,18 +76,16 @@
   background-origin: border-box;
   background-clip: padding-box, border-box;
   transform: scale(1.03);
-  transition: all 0.3s ease;
 }
 
 .tariffsac-tab.active {
   color: #fff;
   border: 1.5px solid transparent;
-  background: #211f36; /* fon qaranlıq qalır */
+  background: #211f36;
   box-shadow: 0 0 18px rgba(24, 178, 222, 0.7),
               0 0 28px rgba(251, 55, 255, 0.6);
   transform: scale(1.03);
 }
-
 
 /* Kartlar */
 .tariffsac-content {
@@ -120,12 +112,13 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   transition: transform 0.2s ease, box-shadow 0.25s ease;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .tariffsac-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 0 18px rgba(251, 55, 255, 0.35),
-    0 0 26px rgba(24, 178, 222, 0.35);
+              0 0 26px rgba(24, 178, 222, 0.35);
 }
 
 .tariffsac-card h3 {
@@ -151,7 +144,6 @@
   padding: 10px 40px;
   border-radius: 50px;
   cursor: pointer;
-  margin-top: 0px;
   transition: all 0.3s ease;
 }
 
@@ -172,30 +164,249 @@
     linear-gradient(135deg, #18b2de, #fb37ff);
   box-shadow: 0 0 10px rgba(24, 178, 222, 0.5),
               0 0 15px rgba(251, 55, 255, 0.4);
-  transition: all 0.15s ease;
 }
 
-/* Tək kampaniya kartı */
+/* Kampaniya kartı (xüsusi) */
 .tariffsac-card.single {
   width: 360px;
   padding: 60px 20px;
-  font-size: 20px;
-}
-
-.tariffsac-card.single strong {
-  color: #fff;
 }
 
 .campaign-text {
   text-align: center;
   line-height: 1.6;
   font-size: 22px;
-  font-weight: 500px;
+  font-weight: 500;
 }
 
 .campaign-text strong {
   font-size: 24px;
-  font-weight: 700px;
+  font-weight: 700;
   color: #fff;
   text-shadow: 0 0 8px rgba(24, 178, 222, 0.5);
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Kiçik notebook / böyük planşet */
+@media (max-width: 1200px) {
+  .tariffsac-title {
+    font-size: 42px;
+  }
+  .tariffsac-cards {
+    gap: 60px;
+  }
+}
+
+/* Planşet */
+@media (max-width: 992px) {
+  .tariffsac-section {
+    padding: 80px 20px;
+  }
+  .tariffsac-title {
+    font-size: 36px;
+  }
+  .tariffsac-tabs {
+    gap: 12px;
+    margin-bottom: 50px;
+  }
+  .tariffsac-tab {
+    padding: 9px 24px;
+    font-size: 15px;
+  }
+  .tariffsac-cards {
+    gap: 50px;
+  }
+  .tariffsac-card {
+    width: 240px;
+    padding: 35px 15px;
+  }
+  .tariffsac-card h3 {
+    font-size: 26px;
+  }
+  .tariffsac-card p {
+    font-size: 17px;
+  }
+  .tariffsac-card button {
+    font-size: 18px;
+    padding: 8px 35px;
+  }
+  .tariffsac-card.single {
+    width: 320px;
+    padding: 50px 15px;
+  }
+  .campaign-text {
+    font-size: 20px;
+  }
+  .campaign-text strong {
+    font-size: 22px;
+  }
+}
+
+/* Mobil (böyük) */
+@media (max-width: 768px) {
+  .tariffsac-section {
+    padding: 70px 15px;
+  }
+  .tariffsac-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  .tariffsac-tabs {
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+  .tariffsac-tab {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+  .tariffsac-cards {
+    gap: 40px;
+  }
+  .tariffsac-card {
+    width: 100%;
+    max-width: 300px;
+    padding: 30px 15px;
+  }
+  .tariffsac-card h3 {
+    font-size: 24px;
+  }
+  .tariffsac-card p {
+    font-size: 16px;
+  }
+  .tariffsac-card button {
+    font-size: 17px;
+    padding: 8px 30px;
+  }
+  .tariffsac-card.single {
+    max-width: 350px;
+    padding: 45px 15px;
+  }
+  .campaign-text {
+    font-size: 19px;
+  }
+  .campaign-text strong {
+    font-size: 21px;
+  }
+}
+
+/* Kiçik mobil telefonlar */
+@media (max-width: 600px) {
+  .tariffsac-section {
+    padding: 60px 12px;
+  }
+  .tariffsac-title {
+    font-size: 28px;
+  }
+  .tariffsac-tabs {
+    gap: 8px;
+  }
+  .tariffsac-tab {
+    padding: 7px 18px;
+    font-size: 13.5px;
+  }
+  .tariffsac-cards {
+    gap: 35px;
+  }
+  .tariffsac-card {
+    max-width: 280px;
+    padding: 25px 12px;
+  }
+  .tariffsac-card h3 {
+    font-size: 22px;
+  }
+  .tariffsac-card p {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+  .tariffsac-card button {
+    font-size: 16px;
+    padding: 7px 28px;
+  }
+  .tariffsac-card.single {
+    max-width: 300px;
+    padding: 40px 12px;
+  }
+  .campaign-text {
+    font-size: 18px;
+  }
+  .campaign-text strong {
+    font-size: 20px;
+  }
+}
+
+/* Çox kiçik ekranlar (480px) */
+@media (max-width: 480px) {
+  .tariffsac-section {
+    padding: 50px 10px;
+  }
+  .tariffsac-title {
+    font-size: 26px;
+  }
+  .tariffsac-tab {
+    padding: 6px 16px;
+    font-size: 13px;
+  }
+  .tariffsac-cards {
+    gap: 30px;
+  }
+  .tariffsac-card {
+    max-width: 260px;
+    padding: 22px 10px;
+  }
+  .tariffsac-card h3 {
+    font-size: 21px;
+  }
+  .tariffsac-card p {
+    font-size: 14px;
+  }
+  .tariffsac-card button {
+    font-size: 15px;
+    padding: 6px 25px;
+  }
+  .tariffsac-card.single {
+    max-width: 280px;
+    padding: 35px 10px;
+  }
+  .campaign-text {
+    font-size: 17px;
+  }
+  .campaign-text strong {
+    font-size: 19px;
+  }
+}
+
+/* iPhone SE / 360px və altı */
+@media (max-width: 360px) {
+  .tariffsac-title {
+    font-size: 24px;
+  }
+  .tariffsac-tab {
+    padding: 5px 14px;
+    font-size: 12px;
+  }
+  .tariffsac-card {
+    max-width: 240px;
+    padding: 20px 8px;
+  }
+  .tariffsac-card h3 {
+    font-size: 20px;
+  }
+  .tariffsac-card p {
+    font-size: 13px;
+  }
+  .tariffsac-card button {
+    font-size: 14px;
+    padding: 5px 22px;
+  }
+  .tariffsac-card.single {
+    max-width: 260px;
+    padding: 30px 8px;
+  }
+  .campaign-text {
+    font-size: 16px;
+  }
+  .campaign-text strong {
+    font-size: 18px;
+  }
 }

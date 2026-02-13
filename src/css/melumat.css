@@ -19,7 +19,7 @@
   position: relative;
 }
 
-/* --- Aradakı incə xətt --- */
+/* Aradakı incə xətt */
 .melumat-container::after {
   content: "";
   position: absolute;
@@ -31,12 +31,12 @@
   transform: translateX(-50%);
 }
 
-/* --- logo və ikonlar --- */
+/* Logo və ikonlar */
 .melumat-right {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;   
+  justify-content: center;
   text-align: center;
   flex: 1;
 }
@@ -45,6 +45,7 @@
   width: 130px;
   height: auto;
   margin-bottom: 12px;
+  transition: width 0.2s ease;
 }
 
 .melumat-icons {
@@ -67,11 +68,11 @@
   opacity: 1;
 }
 
-/* --- Əlaqə --- */
+/* Əlaqə məlumatları */
 .melumat-left {
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
   text-align: left;
   flex: 1;
   gap: 8px;
@@ -96,6 +97,7 @@
   display: flex;
   gap: 10px;
   margin: 10px 0 6px;
+  flex-wrap: wrap; /* Mobilə uyğun – sətirə sığmayanda alt sətir */
 }
 
 .melumat-numbers a {
@@ -109,13 +111,12 @@
   transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
-
 .melumat-email a {
   color: #211f36;
   text-decoration: none;
 }
 
-/* --- Alt copyright --- */
+/* Alt copyright */
 .melumat-footer {
   width: 100%;
   border-top: 1px solid rgba(33, 31, 54, 0.2);
@@ -126,26 +127,206 @@
   text-align: center;
 }
 
-/* --- Responsiv --- */
-@media (max-width: 900px) {
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Kiçik notebook / böyük planşet */
+@media (max-width: 1200px) {
   .melumat-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
+    gap: 80px;
+    padding: 0 60px;
+  }
+}
+
+/* Planşet (portret) */
+@media (max-width: 992px) {
+  .melumat-container {
+    gap: 60px;
     padding: 0 40px;
   }
 
+  .melumat-logo {
+    width: 110px;
+  }
+
+  .melumat-left h3 {
+    font-size: 20px;
+  }
+
+  .melumat-address,
+  .melumat-email {
+    font-size: 15px;
+  }
+
+  .melumat-numbers a {
+    padding: 6px 18px;
+    font-size: 15px;
+  }
+}
+
+/* Mobil (ümumi) – sütun düzülüşü */
+@media (max-width: 768px) {
+  .melumat-section {
+    padding: 50px 0 20px;
+  }
+
+  .melumat-container {
+    flex-direction: column; /* şaquli düzülüş */
+    gap: 40px;
+    padding: 0 30px;
+  }
+
   .melumat-container::after {
-    display: none;
+    display: none; /* orta xətt getsin */
   }
 
   .melumat-left,
   .melumat-right {
     text-align: center;
     align-items: center;
+    max-width: 100%;
+  }
+
+  .melumat-left {
+    text-align: center;
   }
 
   .melumat-numbers {
     justify-content: center;
+  }
+
+  .melumat-footer {
+    margin-top: 40px;
+  }
+}
+
+/* Kiçik mobil telefonlar */
+@media (max-width: 600px) {
+  .melumat-container {
+    padding: 0 20px;
+    gap: 35px;
+  }
+
+  .melumat-logo {
+    width: 100px;
+  }
+
+  .melumat-icons {
+    gap: 16px;
+  }
+
+  .melumat-icons a img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .melumat-left h3 {
+    font-size: 19px;
+  }
+
+  .melumat-address,
+  .melumat-email {
+    font-size: 14px;
+  }
+
+  .melumat-numbers a {
+    padding: 6px 16px;
+    font-size: 14px;
+  }
+
+  .melumat-footer {
+    font-size: 13px;
+    margin-top: 30px;
+    padding-top: 15px;
+  }
+}
+
+/* Çox kiçik ekranlar (iPhone SE, 400px altı) */
+@media (max-width: 480px) {
+  .melumat-section {
+    padding: 40px 0 15px;
+  }
+
+  .melumat-container {
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .melumat-logo {
+    width: 90px;
+    margin-bottom: 8px;
+  }
+
+  .melumat-icons {
+    gap: 14px;
+  }
+
+  .melumat-icons a img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .melumat-left h3 {
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+
+  .melumat-address,
+  .melumat-email {
+    font-size: 13.5px;
+  }
+
+  .melumat-numbers {
+    gap: 8px;
+    margin: 8px 0 4px;
+  }
+
+  .melumat-numbers a {
+    padding: 5px 14px;
+    font-size: 13px;
+    border-width: 1.2px;
+  }
+
+  .melumat-footer {
+    font-size: 12px;
+    margin-top: 25px;
+    padding-top: 12px;
+  }
+}
+
+/* Çox dar ekranlar (360px – məs. iPhone 5/SE) */
+@media (max-width: 360px) {
+  .melumat-container {
+    padding: 0 12px;
+  }
+
+  .melumat-logo {
+    width: 80px;
+  }
+
+  .melumat-icons {
+    gap: 12px;
+  }
+
+  .melumat-icons a img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .melumat-left h3 {
+    font-size: 17px;
+  }
+
+  .melumat-address,
+  .melumat-email {
+    font-size: 12.5px;
+  }
+
+  .melumat-numbers a {
+    padding: 4px 12px;
+    font-size: 12px;
+  }
+
+  .melumat-footer {
+    font-size: 11px;
   }
 }

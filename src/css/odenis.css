@@ -1,7 +1,7 @@
 /* Ümumi bölmə */
 .odenis-section {
   background: #211f36;
-  padding: 100px 0;
+  padding: 100px 20px;
   text-align: center;
 }
 
@@ -17,9 +17,12 @@
 .odenis-subtitle {
   font-size: 17px;
   color: #e4e3e3;
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 70px;
   line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Kart konteyneri */
@@ -40,11 +43,12 @@
   background: transparent;
   display: flex;
   align-items: center;
-  justify-content: center; /* logo ortada */
+  justify-content: center;
   padding: 0 35px;
   transition: all 0.3s ease;
   text-decoration: none;
   position: relative;
+  box-sizing: border-box;
 }
 
 /* Loqo tam ortada və eyni ölçüdə */
@@ -54,13 +58,14 @@
   object-fit: contain;
 }
 
+/* Ox işarəsi */
 .arrow {
   color: #fff;
   font-size: 20px;
   position: absolute;
   right: 35px;
   top: 50%;
-  transform: translateY(-10%);
+  transform: translateY(-50%);
 }
 
 /* Hover zamanı neon parıltı */
@@ -71,4 +76,163 @@
   background-origin: border-box;
   background-clip: padding-box, border-box;
   box-shadow: 0 0 18px rgba(24, 178, 222, 0.25);
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Kiçik notebook / böyük planşet */
+@media (max-width: 1200px) {
+  .odenis-title {
+    font-size: 38px;
+  }
+  .odenis-subtitle {
+    font-size: 16px;
+    margin-bottom: 60px;
+  }
+  .odenis-grid {
+    gap: 50px;
+  }
+}
+
+/* Planşet */
+@media (max-width: 992px) {
+  .odenis-title {
+    font-size: 34px;
+  }
+  .odenis-subtitle {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+  .odenis-grid {
+    gap: 40px;
+  }
+  .odenis-card {
+    width: 280px;
+    height: 120px;
+    padding: 0 30px;
+  }
+  .odenis-card img {
+    width: 100px;
+    height: 60px;
+  }
+  .arrow {
+    right: 30px;
+    font-size: 18px;
+  }
+}
+
+/* Mobil (böyük) – 768px */
+@media (max-width: 768px) {
+  .odenis-section {
+    padding: 70px 20px;
+  }
+  .odenis-title {
+    font-size: 30px;
+  }
+  .odenis-subtitle {
+    font-size: 15px;
+    margin-bottom: 40px;
+    padding: 0 15px;
+  }
+  .odenis-grid {
+    gap: 30px;
+  }
+  .odenis-card {
+    width: 260px;
+    height: 110px;
+    padding: 0 25px;
+  }
+  .odenis-card img {
+    width: 90px;
+    height: 55px;
+  }
+  .arrow {
+    right: 25px;
+    font-size: 17px;
+  }
+}
+
+/* Kiçik mobil telefonlar – 600px */
+@media (max-width: 600px) {
+  .odenis-section {
+    padding: 60px 15px;
+  }
+  .odenis-title {
+    font-size: 26px;
+  }
+  .odenis-subtitle {
+    font-size: 14px;
+    margin-bottom: 35px;
+  }
+  .odenis-grid {
+    gap: 25px;
+  }
+  .odenis-card {
+    width: 100%;
+    max-width: 280px;
+    height: 100px;
+    padding: 0 20px;
+  }
+  .odenis-card img {
+    width: 85px;
+    height: 50px;
+  }
+  .arrow {
+    right: 20px;
+    font-size: 16px;
+  }
+}
+
+/* Çox kiçik ekranlar – 480px */
+@media (max-width: 480px) {
+  .odenis-section {
+    padding: 50px 12px;
+  }
+  .odenis-title {
+    font-size: 24px;
+  }
+  .odenis-subtitle {
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+  .odenis-grid {
+    gap: 20px;
+  }
+  .odenis-card {
+    max-width: 260px;
+    height: 95px;
+    padding: 0 18px;
+  }
+  .odenis-card img {
+    width: 80px;
+    height: 48px;
+  }
+  .arrow {
+    right: 18px;
+    font-size: 15px;
+  }
+}
+
+/* iPhone SE / 360px və altı */
+@media (max-width: 360px) {
+  .odenis-title {
+    font-size: 22px;
+  }
+  .odenis-subtitle {
+    font-size: 12px;
+    margin-bottom: 25px;
+  }
+  .odenis-card {
+    max-width: 240px;
+    height: 90px;
+    padding: 0 15px;
+  }
+  .odenis-card img {
+    width: 75px;
+    height: 45px;
+  }
+  .arrow {
+    right: 15px;
+    font-size: 14px;
+  }
 }

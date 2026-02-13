@@ -1,7 +1,7 @@
 /* Ümumi fon */
 .xidmetler-section {
   background: linear-gradient(to bottom, #211f36 60%, #102b4a 100%);
-  padding: 100px 0;
+  padding: 100px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,7 @@
 /* Neon çərçivə (simmetrik) */
 .main-rectangle {
   position: relative;
-  width: 90%;
+  width: 100%;
   max-width: 1440px;
   padding: 80px 60px;
   margin: 0 auto;
@@ -26,6 +26,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 }
 
 /* Başlıq tam ortada */
@@ -35,7 +36,6 @@
   font-weight: 700;
   margin-bottom: 50px;
   text-align: center;
-  position: relative; /* xəttin yerləşməsi üçün əlavə */
 }
 
 /* Kartlar mərkəzdə və bərabər aralıqla */
@@ -46,11 +46,12 @@
   gap: 70px;
   flex-wrap: wrap;
   margin-bottom: 50px;
-  height: 260px;
+  width: 100%;
 }
 
 /* Kartlar (alt xəttsiz neon stroke) */
 .service-card {
+  position: relative;
   width: 230px;
   height: 200px;
   border-radius: 16px;
@@ -67,14 +68,15 @@
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease;
+  box-sizing: border-box;
 }
 
 .service-card::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 10%;
-  width: 80%;
+  top: -2px;
+  left: 0;
+  width: 100%;
   height: 2px;
   background: linear-gradient(90deg, #fb37ff, #18b2de);
   border-radius: 10px;
@@ -89,8 +91,10 @@
   font-size: 20px;
   font-weight: 600;
   text-align: center;
+  padding: 0 10px;
 }
 
+/* Qoşul düyməsi */
 .join-btn {
   background: transparent;
   color: #fff;
@@ -124,8 +128,7 @@
   transform: scale(1.05);
 }
 
-
-/* Slider düymələri */
+/* Slider düymələri (istifadə edilmir, amma qorunur) */
 .nav-ellipse {
   position: absolute;
   top: 50%;
@@ -164,4 +167,163 @@
   box-shadow: 0 0 15px rgba(24, 178, 222, 0.7),
               0 0 25px rgba(251, 55, 255, 0.5);
   transform: translateY(-50%) scale(1.08);
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Kiçik notebook / böyük planşet */
+@media (max-width: 1200px) {
+  .main-rectangle {
+    padding: 70px 50px;
+  }
+  .section-title {
+    font-size: 38px;
+  }
+  .cards-wrapper {
+    gap: 50px;
+  }
+  .service-card {
+    width: 210px;
+    height: 180px;
+  }
+  .service-card p {
+    font-size: 18px;
+  }
+}
+
+/* Planşet */
+@media (max-width: 992px) {
+  .xidmetler-section {
+    padding: 80px 20px;
+  }
+  .main-rectangle {
+    padding: 60px 40px;
+  }
+  .section-title {
+    font-size: 34px;
+    margin-bottom: 40px;
+  }
+  .cards-wrapper {
+    gap: 40px;
+  }
+  .service-card {
+    width: 200px;
+    height: 170px;
+  }
+  .service-card p {
+    font-size: 17px;
+  }
+  .join-btn {
+    padding: 10px 28px;
+    font-size: 15px;
+  }
+}
+
+/* Mobil (böyük) */
+@media (max-width: 768px) {
+  .xidmetler-section {
+    padding: 60px 15px;
+  }
+  .main-rectangle {
+    padding: 50px 30px;
+    border-radius: 20px;
+  }
+  .section-title {
+    font-size: 30px;
+    margin-bottom: 35px;
+  }
+  .cards-wrapper {
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  .service-card {
+    width: 100%;
+    max-width: 280px;
+    height: 160px;
+  }
+  .service-card p {
+    font-size: 18px;
+  }
+  .join-btn {
+    padding: 10px 26px;
+    font-size: 15px;
+  }
+}
+
+/* Kiçik mobil telefonlar */
+@media (max-width: 600px) {
+  .xidmetler-section {
+    padding: 50px 12px;
+  }
+  .main-rectangle {
+    padding: 40px 20px;
+  }
+  .section-title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+  .cards-wrapper {
+    gap: 25px;
+  }
+  .service-card {
+    max-width: 260px;
+    height: 150px;
+  }
+  .service-card p {
+    font-size: 17px;
+  }
+  .join-btn {
+    padding: 9px 24px;
+    font-size: 14px;
+  }
+}
+
+/* Çox kiçik ekranlar (480px) */
+@media (max-width: 480px) {
+  .xidmetler-section {
+    padding: 40px 10px;
+  }
+  .main-rectangle {
+    padding: 35px 15px;
+    border-radius: 18px;
+  }
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+  .cards-wrapper {
+    gap: 20px;
+  }
+  .service-card {
+    max-width: 240px;
+    height: 140px;
+  }
+  .service-card p {
+    font-size: 16px;
+  }
+  .join-btn {
+    padding: 8px 22px;
+    font-size: 13.5px;
+  }
+}
+
+/* iPhone SE / 360px və altı */
+@media (max-width: 360px) {
+  .main-rectangle {
+    padding: 30px 12px;
+  }
+  .section-title {
+    font-size: 22px;
+  }
+  .service-card {
+    max-width: 220px;
+    height: 130px;
+  }
+  .service-card p {
+    font-size: 15px;
+  }
+  .join-btn {
+    padding: 7px 20px;
+    font-size: 13px;
+  }
 }
